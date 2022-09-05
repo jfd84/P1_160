@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A51A774428C647CB007749D1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51A774328C647CB007749D1 /* main.cpp */; };
+		A51A774B28C64805007749D1 /* LL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51A774A28C64805007749D1 /* LL.cpp */; };
+		A51A774F28C64862007749D1 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51A774E28C64862007749D1 /* Node.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,16 @@
 /* Begin PBXFileReference section */
 		A51A774028C647CB007749D1 /* P1_160 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = P1_160; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51A774328C647CB007749D1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A51A774A28C64805007749D1 /* LL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LL.cpp; sourceTree = "<group>"; };
+		A51A774C28C64812007749D1 /* LL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LL.h; sourceTree = "<group>"; };
+		A51A774D28C64856007749D1 /* Node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		A51A774E28C64862007749D1 /* Node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		A51A775028C654E7007749D1 /* poisson_small.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = poisson_small.txt; sourceTree = "<group>"; };
+		A51A775128C654E7007749D1 /* poisson.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = poisson.txt; sourceTree = "<group>"; };
+		A51A775228C654E7007749D1 /* poisson_verylarge.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = poisson_verylarge.txt; sourceTree = "<group>"; };
+		A51A775328C654E7007749D1 /* uniform_verylarge.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = uniform_verylarge.txt; sourceTree = "<group>"; };
+		A51A775428C654E7007749D1 /* uniform.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = uniform.txt; sourceTree = "<group>"; };
+		A51A775528C654E7007749D1 /* uniform_small.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = uniform_small.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,16 @@
 			isa = PBXGroup;
 			children = (
 				A51A774328C647CB007749D1 /* main.cpp */,
+				A51A774A28C64805007749D1 /* LL.cpp */,
+				A51A774C28C64812007749D1 /* LL.h */,
+				A51A774E28C64862007749D1 /* Node.cpp */,
+				A51A774D28C64856007749D1 /* Node.h */,
+				A51A775028C654E7007749D1 /* poisson_small.txt */,
+				A51A775228C654E7007749D1 /* poisson_verylarge.txt */,
+				A51A775128C654E7007749D1 /* poisson.txt */,
+				A51A775528C654E7007749D1 /* uniform_small.txt */,
+				A51A775328C654E7007749D1 /* uniform_verylarge.txt */,
+				A51A775428C654E7007749D1 /* uniform.txt */,
 			);
 			path = P1_160;
 			sourceTree = "<group>";
@@ -119,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A51A774F28C64862007749D1 /* Node.cpp in Sources */,
 				A51A774428C647CB007749D1 /* main.cpp in Sources */,
+				A51A774B28C64805007749D1 /* LL.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

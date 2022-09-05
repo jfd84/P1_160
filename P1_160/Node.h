@@ -12,17 +12,11 @@ class Node {
 public:
     Node();
     
-    Node* getNext();
-    Node* getPrev();
     int getInfo();
-    
-    
     void setInfo(int val);
     
     Node* next;
-    Node* prev;
     int info;
-    
 };
 
 #endif /* Node_h */

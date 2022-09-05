@@ -22,7 +22,7 @@ public:
     MTFlist();
     virtual ~MTFlist();
     
-    int getCount() const { return count; }
+    int getSize() const { return size; }
     
     void loadFile(std::string fileName);
     
@@ -38,7 +38,8 @@ public:
 private:
     Node* header;
     Node* trailer;
-    int count;
+    Node* current;
+    int size;
 }; //END MTFList Declaration
 
 
@@ -49,7 +50,7 @@ public:
     orderedList();
     virtual ~orderedList();
     
-    int getCount() const { return count; }
+    int getSize() const { return size; }
     
     void loadFile(std::string fileName);
     
@@ -65,7 +66,8 @@ public:
 private:
     Node* header;
     Node* trailer;
-    int count;
+    Node* current;
+    int size;
  
 }; //END orderedList Declaration
 

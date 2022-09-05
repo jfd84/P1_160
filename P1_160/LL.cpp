@@ -17,12 +17,12 @@ MTFlist::MTFlist()
     trailer = new Node;
     
     header->next = trailer;
-    header->prev = header;
-    
     trailer->next = trailer;
-    trailer->prev = header;
     
-    count = 0;
+    current = header;
+    
+    size = 0;
+    totalTrans = 0;
 }
 
 //BEGIN MTFlist default destructor
@@ -33,7 +33,7 @@ MTFlist::~MTFlist()
     unsigned currentI = 0;
     Node *thisNode = header->next;
     //loops through the list, deleting each node
-    while (currentI < getCount())
+    while (currentI < getSize())
     {
         Node *next = thisNode->next;
         delete thisNode;
@@ -41,7 +41,7 @@ MTFlist::~MTFlist()
         currentI += 1;
         
     }
-    count = 0;
+    size = 0;
     cout << "MTFlist::~MTFlist() Exiting destructor for class MTFlist\n";
 }
 
@@ -75,6 +75,7 @@ void MTFlist::loadFile(string fileName)
         add(thisInt);
         thisAdd += 1;
     }
+    size = numAdds;
     
     string strNumQ;
     getline(inFile, strNumQ);
@@ -89,8 +90,8 @@ void MTFlist::loadFile(string fileName)
     {
         getline(inFile, strThisQ, delim);
         int thisQ = stoi(strThisQ);
-        int count = search(thisQ);
-        totalTrans += count;
+        int searchCount = search(thisQ);
+        totalTrans += searchCount;
         i += 1;
     }
     auto end = chrono::steady_clock::now();
@@ -107,12 +108,10 @@ void MTFlist::add(int val)
     newNode->info = val;
     newNode->next = trailer;
     
-    newNode->prev = trailer->prev;
-    trailer->prev->next = newNode;
+    current->next = newNode;
+    current = newNode;
     
-    trailer->prev = newNode;
-    
-    count = count + 1;
+    size = size + 1;
 }
 
 //BEGIN MTFlist search() function definition
@@ -122,19 +121,15 @@ int MTFlist::search(int val)
     Node *tmp = new Node;
     tmp = header->next;
     
-    for (unsigned i = 1; i < count; i++)
+    for (unsigned i = 1; i < size; i++)
     {
-        if (tmp->info == val)
+        if (tmp->next->info == val)
         {
-            Node *thisPrev = tmp->prev;
-            Node *thisNext = tmp->next;
-            thisPrev->next = thisNext;
-            thisNext->prev = thisPrev;
+            Node *found = tmp->next;
+            tmp->next = found->next;
             
-            tmp->prev = header;
-            tmp->next = header->next;
-            header->next->prev = tmp;
-            header->next = tmp;
+            found->next = header->next;
+            header->next = found;
             return i;
         }
         tmp = tmp->next;
@@ -171,12 +166,12 @@ orderedList::orderedList()
     trailer = new Node;
     
     header->next = trailer;
-    header->prev = header;
-    
     trailer->next = trailer;
-    trailer->prev = header;
     
-    count = 0;
+    current = header;
+    
+    size = 0;
+    totalTrans = 0;
 }
 
 //BEGIN OrderedList default destructor
@@ -187,14 +182,14 @@ orderedList::~orderedList()
     unsigned currentI = 0;
     Node *thisNode = header->next;
     //loops through the list, deleting each node
-    while (currentI < getCount())
+    while (currentI < getSize())
     {
         Node *next = thisNode->next;
         delete thisNode;
         thisNode = next;
         currentI += 1;
     }
-    count = 0;
+    size = 0;
     cout << "orderedList::~orderedList() Exiting destructor for class orderedList\n";
 }
 
@@ -228,6 +223,7 @@ void orderedList::loadFile(string fileName)
         add(thisInt);
         thisAdd += 1;
     }
+    size = numAdds;
     
     string strNumQ;
     getline(inFile, strNumQ);
@@ -242,8 +238,9 @@ void orderedList::loadFile(string fileName)
     {
         getline(inFile, strThisQ, delim);
         int thisQ = stoi(strThisQ);
-        int count = search(thisQ);
-        totalTrans += count;
+        int searchCount = search(thisQ);
+        totalTrans += searchCount;
+        cout << totalTrans << endl;
         i += 1;
     }
     auto end = chrono::steady_clock::now();
@@ -259,12 +256,8 @@ void orderedList::add(int val)
     newNode->info = val;
     newNode->next = trailer;
     
-    newNode->prev = trailer->prev;
-    trailer->prev->next = newNode;
-    
-    trailer->prev = newNode;
-    
-    count = count + 1;
+    current->next = newNode;
+    current = newNode;
 }
 
 //BEGIN orderedList search() function definition
@@ -274,7 +267,7 @@ int orderedList::search(int val)
     Node *tmp = new Node;
     tmp = header->next;
     
-    for (unsigned i = 1; i < count; i++)
+    for (int i = 1; i < size; i++)
     {
         if (tmp->info == val)
         {
@@ -282,7 +275,7 @@ int orderedList::search(int val)
         }
         tmp = tmp->next;
     }
-    return 0;
+    return size;
 }
 
 //BEGIN orderedList print() function definition

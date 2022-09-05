@@ -7,23 +7,9 @@
 
 #include <iostream>
 #include "LL.h"
-/*
- The first line of the input file will be an integer that is the number of integers that will be added to the two lists (i.e., their eventual lengths).
- 
- This will be followed by a new line character.
- 
- The second line will contain all the values (integers) to store; we will refer to this sequence of numbers as the “Additions”. This will be followed by a new line character.
- 
- The next line will then contain an integer that is the number of queries, followed by a new line character.
- 
- The final line is a sequence of values to retrieve from each of the lists; we will refer to this sequence as the “Queries”.
- 
- */
-
 
 int main(int argc, const char * argv[]) {
 
-    cout << "GitHub TEST" << endl;
     string fileName = "/Users/jfd/Desktop/COSC 160/P1_160/P1_160/poisson_small.txt";
     
     MTFlist mtf;

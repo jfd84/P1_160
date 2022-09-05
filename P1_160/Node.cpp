@@ -12,17 +12,8 @@ Node::Node()
 {
     info = 0;
     next = NULL;
-    prev = NULL;
 }
 
-
-
-Node* Node::getNext(){
-    return next;
-}
-Node* Node::getPrev(){
-    return prev;
-}
 
 int Node::getInfo(){
     return info;

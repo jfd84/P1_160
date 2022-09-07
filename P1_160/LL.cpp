@@ -30,7 +30,7 @@ MTFlist::~MTFlist()
 {
     cout << "MTFlist::~MTFlist() Entering destructor for class MTFlist\n";
     
-    unsigned currentI = 0;
+    int currentI = 0;
     Node *thisNode = header->next;
     //loops through the list, deleting each node
     while (currentI < getSize())
@@ -121,7 +121,7 @@ int MTFlist::search(int val)
     Node *tmp = new Node;
     tmp = header->next;
     
-    for (unsigned i = 1; i < size; i++)
+    for (int i = 1; i < size; i++)
     {
         if (tmp->next->info == val)
         {
@@ -179,7 +179,7 @@ orderedList::~orderedList()
 {
     cout << "orderedList::~orderedList() Entering destructor for class orderedList\n";
     
-    unsigned currentI = 0;
+    int currentI = 0;
     Node *thisNode = header->next;
     //loops through the list, deleting each node
     while (currentI < getSize())
@@ -240,7 +240,6 @@ void orderedList::loadFile(string fileName)
         int thisQ = stoi(strThisQ);
         int searchCount = search(thisQ);
         totalTrans += searchCount;
-        cout << totalTrans << endl;
         i += 1;
     }
     auto end = chrono::steady_clock::now();

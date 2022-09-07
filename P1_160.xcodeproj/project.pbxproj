@@ -33,10 +33,10 @@
 		A51A774E28C64862007749D1 /* Node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
 		A51A775028C654E7007749D1 /* poisson_small.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = poisson_small.txt; sourceTree = "<group>"; };
 		A51A775128C654E7007749D1 /* poisson.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = poisson.txt; sourceTree = "<group>"; };
-		A51A775228C654E7007749D1 /* poisson_verylarge.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = poisson_verylarge.txt; sourceTree = "<group>"; };
-		A51A775328C654E7007749D1 /* uniform_verylarge.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = uniform_verylarge.txt; sourceTree = "<group>"; };
 		A51A775428C654E7007749D1 /* uniform.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = uniform.txt; sourceTree = "<group>"; };
 		A51A775528C654E7007749D1 /* uniform_small.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = uniform_small.txt; sourceTree = "<group>"; };
+		A51A775728C77B76007749D1 /* poisson_verylarge.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = poisson_verylarge.txt; sourceTree = "<group>"; };
+		A51A775828C77B76007749D1 /* uniform_verylarge.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = uniform_verylarge.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,11 +75,11 @@
 				A51A774E28C64862007749D1 /* Node.cpp */,
 				A51A774D28C64856007749D1 /* Node.h */,
 				A51A775028C654E7007749D1 /* poisson_small.txt */,
-				A51A775228C654E7007749D1 /* poisson_verylarge.txt */,
 				A51A775128C654E7007749D1 /* poisson.txt */,
 				A51A775528C654E7007749D1 /* uniform_small.txt */,
-				A51A775328C654E7007749D1 /* uniform_verylarge.txt */,
 				A51A775428C654E7007749D1 /* uniform.txt */,
+				A51A775728C77B76007749D1 /* poisson_verylarge.txt */,
+				A51A775828C77B76007749D1 /* uniform_verylarge.txt */,
 			);
 			path = P1_160;
 			sourceTree = "<group>";

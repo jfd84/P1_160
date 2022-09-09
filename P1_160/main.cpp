@@ -28,11 +28,17 @@ int main(int argc, const char * argv[]) {
     orderedList ord;
     ord.loadFile(fileName);
     
+    orderedArray testArr;
+    testArr.loadFile(fileName);
+    
     cout << "MTFList after Queries: ";
     mtf.print();
     
     cout << "orderedList after Queries: ";
     ord.print();
+    
+    cout << "orderedArray after Queries: ";
+    testArr.print();
     
      
     cout << endl << "MTFList Traversal Count: " << mtf.totalTrans << endl;
@@ -40,6 +46,10 @@ int main(int argc, const char * argv[]) {
      
     cout << endl << "orderedList Traversal Count: " << ord.totalTrans << endl;
     cout << "orderedList time: " << ord.time << " nanoseconds" << endl;
+    
+    cout << endl << "orderedArray Traversal Count: " << testArr.totalTrans << endl;
+    cout << "orderedArray time: " << testArr.time << " nanoseconds" << endl;
+    
     
     if (mtf.time < ord.time) {
         cout << endl << "MTFlist is faster for this data." << endl << endl;

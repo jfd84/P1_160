@@ -71,6 +71,30 @@ private:
  
 }; //END orderedList Declaration
 
+class orderedArray {
+public:
+    //Creates an array with the size specified in the first line of the file
+    orderedArray();
+    
+    //Uses an instance of fstream to read file data and fill the array
+    void loadFile(string fileName);
+    
+    //Call the existing array::end member function and fills the open index
+    void add(int ndx, int val);
+    
+    //Iterates through array, returns index of the found element (returns size of list if not found)
+    int search(int val);
+    
+    //Iterates through array, prints each element
+    void print();
+    
+    int totalTrans;
+    int time;
+    int size;
+    int *arr;
+    
+}; //END orderedArray Declaration
+
 
 
 #endif /* LL_h */

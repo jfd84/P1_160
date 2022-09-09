@@ -18,8 +18,9 @@ int main(int argc, const char * argv[]) {
         cout << endl;
     }
     else {
-        string fileName = argv[1];
+        fileName = argv[1];
     }
+
     
     MTFlist mtf;
     mtf.loadFile(fileName);

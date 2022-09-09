@@ -63,6 +63,7 @@ void MTFlist::loadFile(string fileName)
     
     string getNumAdds;
     getline(inFile, getNumAdds);
+    
     int numAdds = stoi(getNumAdds);
     
     char delim = ' ';
@@ -81,6 +82,7 @@ void MTFlist::loadFile(string fileName)
     getline(inFile, strNumQ);
     getline(inFile, strNumQ);
     int numQ = stoi(strNumQ);
+
     
     int i = 0;
     string strThisQ;
